@@ -85,13 +85,13 @@ export default  function NavCollapse ({
         : theme.palette.primary.light,
       color: pathname.includes(menu.href)|| open ? 'white' : theme.palette.primary.main,
     },
-    color:
-      open && level < 2
-        ? 'white'
-        : `inherit` && level > 1 && open
-        ? theme.palette.primary.main
-        : theme.palette.text.secondary,
-    borderRadius: `${customizer.borderRadius}px`,
+    // color:
+    //   open && level < 2
+    //     ? 'white'
+    //     : `inherit` && level > 1 && open
+    //     ? theme.palette.primary.main
+    //     : theme.palette.text.secondary,
+    // borderRadius: `${customizer.borderRadius}px`,
   }));
 
   // If Menu has Children

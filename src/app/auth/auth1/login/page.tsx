@@ -35,7 +35,7 @@ export default function Login () {
       >
         <Box position="relative">
           <Box px={3}>
-            <Logo />
+            {/* <Logo /> */}
           </Box>
           <Box
             alignItems="center"

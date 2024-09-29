@@ -48,7 +48,7 @@ const LpHeader = () => {
     <AppBarStyled position="sticky" elevation={8}>
       <Container maxWidth="lg">
         <ToolbarStyled>
-          <Logo />
+          {/* <Logo /> */}
           <Box flexGrow={1} />
           {lgDown ? (
             <IconButton

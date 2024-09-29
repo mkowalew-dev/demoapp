@@ -16,7 +16,7 @@ const MobileSidebar = () => {
     return (
         <>
             <Box px={3}>
-                <Logo />
+                {/* <Logo /> */}
             </Box>
             <Box p={3}>
 

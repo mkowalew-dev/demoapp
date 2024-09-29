@@ -47,7 +47,7 @@ const Header = () => {
         }}
       >
         <Box sx={{ width: lgDown ? '45px' : 'auto', overflow: 'hidden' }}>
-          <Logo />
+          {/* <Logo /> */}
         </Box>
         {/* -------------------------------------------
         {/* Toggle Button Sidebar */}

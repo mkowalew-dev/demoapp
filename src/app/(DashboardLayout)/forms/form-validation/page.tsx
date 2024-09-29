@@ -36,7 +36,7 @@ const FormValidation = () => {
         <Grid item xs={12} sm={6}>
           <BlankCard>
             <CardContent sx={{ pt: 0 }}>
-              <Logo />
+              {/* <Logo /> */}
               <FVRegister />
             </CardContent>
           </BlankCard>
@@ -44,7 +44,7 @@ const FormValidation = () => {
         <Grid item xs={12} sm={6}>
           <BlankCard>
             <CardContent sx={{ pt: 0 }}>
-              <Logo />
+              {/* <Logo /> */}
               <FVLogin />
             </CardContent>
           </BlankCard>
