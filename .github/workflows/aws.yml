@@ -9,10 +9,6 @@ permissions:
 
 jobs:
   deploy:
-    name: Register Targets
-    runs-on: ubuntu-latest
-    environment: production
-
     steps:
     - name: Register Targets
       uses: ItsKarma/aws-cli@v1.70.0
