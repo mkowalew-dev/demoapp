@@ -1,20 +1,19 @@
 name: Simulate AWS LB Change
-
-on:
-  push:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
-
+on: [push]
 jobs:
-  deploy:
+  sync:
+    runs-on: ubuntu-latest
     steps:
-    - name: Register Targets
-      uses: ItsKarma/aws-cli@v1.70.0
-      with:
-        args: elbv2 register-targets --target-group-arn arn:aws:elasticloadbalancing:us-east-1:739275484880:targetgroup/demowebapp-tg/8c76bdf465fef8bb --targets Id=172.31.17.204
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_DEFAULT_REGION: "us-east-1"
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install awscli
+      - run: aws elbv2 register-targets --target-group-arn arn:aws:elasticloadbalancing:us-east-1:739275484880:targetgroup/demowebapp-tg/8c76bdf465fef8bb --targets Id=172.31.17.204
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: "us-east-1"        
