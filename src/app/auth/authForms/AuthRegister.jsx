@@ -6,7 +6,7 @@ import Link from 'next/link';
 import CustomTextField from '@/app/components/forms/theme-elements/CustomTextField';
 import CustomFormLabel from '@/app/components/forms/theme-elements/CustomFormLabel';
 import Stack from '@mui/material/Stack';
-import AuthSocialButtons from '../../../../../../thousandeyes-projects/Plus/NextJs/packages/javascript/main/src/app/auth/authForms/AuthSocialButtons';
+import AuthSocialButtons from './AuthSocialButtons';
 
 const AuthRegister = ({ title, subtitle, subtext }) => (
   <>
