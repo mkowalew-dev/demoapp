@@ -1,7 +1,7 @@
 name: Simulate AWS SG Change
 on:
   schedule:
-    - cron:  '0 */3 * * 1-5' # Run every 4hrs Mon-Friday
+    - cron:  '0 */8 * * 1-5' # Run every 4hrs Mon-Friday
 
 jobs:
   sync:
