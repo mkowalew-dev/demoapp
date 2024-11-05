@@ -15,7 +15,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install awscli
-      - run: aws ec2 revoke-security-group-ingress --group-name launch-wizard-1 --protocol tcp --port 443 --cidr 128.0.0.0/8 --region us-west-1
       - run: aws ec2 authorize-security-group-ingress --group-name launch-wizard-1 --protocol tcp --port 443 --cidr 0.0.0.0/0 --region us-west-1
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
