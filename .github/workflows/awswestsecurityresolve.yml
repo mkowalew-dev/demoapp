@@ -1,7 +1,7 @@
 name: Simulate AWS SG Resolve
 on:
   schedule:
-    - cron:  '30 */8 * * 1-5' # Run every 4hrs Mon-Friday
+    - cron:  '30 */3 * * 1-5' # Run every 4hrs Mon-Friday
 
 jobs:
   sync:
