@@ -236,18 +236,18 @@ const Menuitems: MenuitemsType[] = [
     navlabel: true,
     subheader: "Pages",
   },
-  {
-    id: uniqueId(),
-    title: 'Roll Base Access',
-    icon: IconLockAccess,
-    href: '/theme-pages/casl',
-  },
-  {
-    id: uniqueId(),
-    title: "Treeview",
-    icon: IconGitMerge,
-    href: "/theme-pages/treeview",
-  },
+  // {
+  //   id: uniqueId(),
+  //   title: 'Roll Base Access',
+  //   icon: IconLockAccess,
+  //   href: '/theme-pages/casl',
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Treeview",
+  //   icon: IconGitMerge,
+  //   href: "/theme-pages/treeview",
+  // },
   {
     id: uniqueId(),
     title: "Pricing",
