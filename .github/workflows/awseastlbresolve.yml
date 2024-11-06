@@ -1,7 +1,7 @@
 name: Resolve AWS LB Change
 on:
   schedule:
-    - cron:  '30 */6 * * 1-5' # Run every 4hrs and 30min Mon-Friday
+    - cron:  '25 */6 * * 1-5' # Run every 4hrs and 30min Mon-Friday
 
 jobs:
   sync:
