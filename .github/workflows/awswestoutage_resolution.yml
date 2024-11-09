@@ -1,0 +1,21 @@
+name: Simulate AWS LB Change
+on:
+  schedule:
+    - cron:  '30 15,18 * * 1-5' # Run every 4hrs Mon-Friday
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install awscli
+      - run: aws elbv2 set-rule-priorities --rule-priorities RuleArn=arn:aws:elasticloadbalancing:us-west-1:739275484880:listener-rule/app/west-demoapp-lb/48cdec121f1d8e8c/5cd674a1de09da44/08316f507e736e9f,Priority=100 --region us-west-1
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

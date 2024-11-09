@@ -59,7 +59,8 @@
     "styled-components": "^6.0.8",
     "stylis-plugin-rtl": "^2.1.1",
     "typescript": "^5.2.2",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "appdynamics": "^24.9.0"
   },
   "devDependencies": {
     "@types/chance": "^1.1.4",

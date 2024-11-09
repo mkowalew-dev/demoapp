@@ -10,6 +10,18 @@ const app = next({ dev, hostname, port });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
+    require("appdynamics").profile({
+        controllerHostName: 'hopper202411071003226.saas.appdynamics.com',
+        controllerPort: 443,
+
+        // If SSL, be sure to enable the next line
+        controllerSslEnabled: true,
+        accountName: 'hopper202411071003226',
+        accountAccessKey: 'hibp470mqw9y',
+        applicationName: 'demowebapp.net',
+        tierName: 'Front-End',
+        nodeName: 'demoapp-fe' // The controller will automatically append the node name with a unique number
+    });
     createServer(async (req, res) => {
         try {
             // Be sure to pass `true` as the second argument to `url.parse`.
