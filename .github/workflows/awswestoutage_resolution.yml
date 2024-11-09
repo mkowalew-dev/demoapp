@@ -1,7 +1,7 @@
 name: Simulate AWS LB Change
 on:
   schedule:
-    - cron:  '30 15,18 * * 1-6' # Run every 4hrs Mon-Friday
+    - cron:  '30 15,18 * * *' # Run every 4hrs Mon-Friday
 
 jobs:
   sync:
